@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Masterclass Cards</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="bg-gray-100 p-2 md:p-6 mx-2 md:mx-16">
@@ -15,13 +19,34 @@
     </h2>
 
     <div class="overflow-x-auto">
-      <div
-        class="flex overflow-x-auto md:grid grid-cols-1 gap-4 lg:grid-cols-3 my-4 md:my-8"
-        id="cardContainer"
-      >
+      <div class="flex overflow-x-auto gap-4 3 my-4" id="cardContainer">
         <!-- Cards will be append here -->
       </div>
     </div>
+    <button
+      class="bg-black text-white px-6 py-2 rounded-lg text-sm font-semibold flex items-center gap-2 mx-auto text-center"
+    >
+      View All Masterclasses
+      <span class="flex items-center w-6">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <path
+              d="M10 7L15 12L10 17"
+              stroke="#ffffff"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </g>
+        </svg>
+      </span>
+    </button>
 
     <script src="script.js" defer></script>
   </body>

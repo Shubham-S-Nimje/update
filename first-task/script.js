@@ -36,7 +36,7 @@ const masterclasses = [
 
 const cardContainer = document.getElementById("cardContainer");
 
-masterclasses.forEach((item) => {
+masterclasses.map((item, index) => {
   const card = document.createElement("div");
   card.className =
     "bg-white rounded-2xl flex-none flex flex-col gap-2 w-[18rem] sm:w-[20rem] md:w-[22rem]";
@@ -48,11 +48,22 @@ masterclasses.forEach((item) => {
       <h2 class="text-normal md:text-lg font-semibold mb-3">${item.title}</h2>
 
       <div class="flex justify-between h-full items-center">
-        <div class="w-1/2">
+      <div class="w-4 h-full mx-1.5 py-1">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+        <g id="SVGRepo_iconCarrier"> 
+        <circle cx="10" cy="6" r="4" stroke="#1C274C" stroke-width="1.5"></circle> 
+        <path d="M18 17.5C18 19.9853 18 22 10 22C2 22 2 19.9853 2 17.5C2 15.0147 5.58172 13 10 13C14.4183 13 18 15.0147 18 17.5Z" stroke="#1C274C" stroke-width="1.5"></path> 
+        <path d="M19 2C19 2 21 3.2 21 6C21 8.8 19 10 19 10" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"></path> <path d="M17 4C17 4 18 4.6 18 6C18 7.4 17 8 17 8" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"></path> 
+        </g>
+        </svg>
+        </div>
+        <div class="w-3/4">
           <p class="text-gray-700 truncate text-sm font-semibold">By ${item.by}</p>
           <p class="text-gray-800 text-xs">${item.role}</p>
         </div>
-        <img src="${item.company}" alt="${item.title}" class="w-16 h-auto">
+        <img src="${item.company}" alt="${item.title}" class="max-w-fit w-16 h-auto">
       </div>
 
       <div class="mt-4 flex gap-2">
